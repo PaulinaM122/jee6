@@ -1,4 +1,4 @@
-package pl.edu.pg.eti.kask.perfum.user.repository.persistence;
+package pl.edu.pg.eti.kask.perfum.user.repository.rest;
 
 import jakarta.enterprise.context.Dependent;
 import jakarta.persistence.EntityManager;

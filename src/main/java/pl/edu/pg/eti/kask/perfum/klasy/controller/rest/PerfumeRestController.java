@@ -1,11 +1,14 @@
 package pl.edu.pg.eti.kask.perfum.klasy.controller.rest;
 
+import jakarta.annotation.security.RolesAllowed;
 import jakarta.ejb.EJB;
+import jakarta.ejb.EJBAccessException;
 import jakarta.ejb.EJBException;
 import jakarta.inject.Inject;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.ws.rs.BadRequestException;
 import jakarta.ws.rs.NotFoundException;
+import jakarta.ws.rs.ForbiddenException;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.WebApplicationException;
 import jakarta.ws.rs.core.Context;
@@ -25,6 +28,7 @@ import pl.edu.pg.eti.kask.perfum.klasy.service.PerfumeService;
 import pl.edu.pg.eti.kask.perfum.component.DtoFunctionFactory;
 import java.util.UUID;
 import java.util.logging.Level;
+import pl.edu.pg.eti.kask.perfum.user.entity.UserRoles;
 
 /**
  * Simple framework agnostic implementation of controller.
@@ -110,7 +114,7 @@ public class PerfumeRestController implements PerfumeController {
     @SneakyThrows
     public void putPerfume(UUID id, PutPerfumeRequest request) {
         try {
-            service.create(factory.requestToPerfume().apply(id, request));
+            service.createForCallerPrincipal(factory.requestToPerfume().apply(id, request));
             response.setHeader("Location", uriInfo.getBaseUriBuilder()
                     .path(PerfumeController.class, "getPerfume")
                     .build(id)
@@ -128,8 +132,17 @@ public class PerfumeRestController implements PerfumeController {
     @Override
     public void patchPerfume(UUID id, PatchPerfumeRequest request) {
         service.find(id).ifPresentOrElse(
-                entity -> service.update(factory.updatePerfume().apply(entity, request)),
-                () -> { throw new NotFoundException(); }
+                entity -> {
+                    try {
+                        service.update(factory.updatePerfume().apply(entity, request));
+                    } catch (EJBAccessException ex) {
+                        log.log(Level.WARNING, ex.getMessage(), ex);
+                        throw new ForbiddenException(ex.getMessage());
+                    }
+                },
+                () -> {
+                    throw new NotFoundException();
+                }
         );
     }
 
@@ -161,7 +174,6 @@ public class PerfumeRestController implements PerfumeController {
 
         service.create(perfume);
     }
-
     /*@Override
     public void patchPerfume(UUID id, PatchPerfumeRequest request) {
         if (request == null) {
@@ -191,4 +203,5 @@ public class PerfumeRestController implements PerfumeController {
 
         service.update(perfume);
     }*/
+
 }

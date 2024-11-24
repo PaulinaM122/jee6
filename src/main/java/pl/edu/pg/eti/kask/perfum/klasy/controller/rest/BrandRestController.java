@@ -1,5 +1,6 @@
 package pl.edu.pg.eti.kask.perfum.klasy.controller.rest;
 
+import jakarta.annotation.security.RolesAllowed;
 import jakarta.ejb.EJB;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.NotFoundException;
@@ -12,6 +13,7 @@ import pl.edu.pg.eti.kask.perfum.klasy.service.BrandService;
 import pl.edu.pg.eti.kask.perfum.component.DtoFunctionFactory;
 import pl.edu.pg.eti.kask.perfum.klasy.dto.PatchBrandRequest;
 import pl.edu.pg.eti.kask.perfum.klasy.entity.Brand;
+import pl.edu.pg.eti.kask.perfum.user.entity.UserRoles;
 
 import java.util.UUID;
 
@@ -60,6 +62,7 @@ public class BrandRestController implements BrandController {
     }
 
     @Override
+    @RolesAllowed(UserRoles.ADMIN)
     public void deleteBrand(UUID id) {
         service.find(id).ifPresentOrElse(
                 entity -> service.delete(id),

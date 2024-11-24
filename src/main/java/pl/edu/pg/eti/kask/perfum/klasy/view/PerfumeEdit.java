@@ -41,7 +41,7 @@ public class PerfumeEdit implements Serializable {
     }
 
     public void init() throws IOException {
-        Optional<Perfume> perfume = service.find(id);
+        Optional<Perfume> perfume = service.findForCallerPrincipal(id);
         if (perfume.isPresent()) {
             this.perfume = factory.perfumeToEditModel().apply(perfume.get());
         } else {

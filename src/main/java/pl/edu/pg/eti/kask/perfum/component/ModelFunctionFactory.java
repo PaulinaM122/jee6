@@ -5,6 +5,11 @@ import pl.edu.pg.eti.kask.perfum.klasy.entity.Brand;
 import pl.edu.pg.eti.kask.perfum.klasy.entity.Perfume;
 import pl.edu.pg.eti.kask.perfum.klasy.model.*;
 import pl.edu.pg.eti.kask.perfum.klasy.model.function.*;
+import pl.edu.pg.eti.kask.perfum.user.entity.User;
+import pl.edu.pg.eti.kask.perfum.user.model.UserModel;
+import pl.edu.pg.eti.kask.perfum.user.model.UsersModel;
+import pl.edu.pg.eti.kask.perfum.user.model.function.UserToModelFunction;
+import pl.edu.pg.eti.kask.perfum.user.model.function.UsersToModelFunction;
 
 import java.util.function.Function;
 
@@ -39,7 +44,7 @@ public class ModelFunctionFactory {
      * @return new instance
      */
     public PerfumeToEditModelFunction perfumeToEditModel() {
-        return new PerfumeToEditModelFunction();
+        return new PerfumeToEditModelFunction(userToModel());
     }
 
     /**
@@ -95,5 +100,24 @@ public class ModelFunctionFactory {
     public BrandToEditModelFunction brandToEditModel() {
         return new BrandToEditModelFunction();
     }
+
+    /**
+     * Returns a function to convert a single {@link User} to {@link UserModel}.
+     *
+     * @return UserToModelFunction instance
+     */
+    public UserToModelFunction userToModel() {
+        return new UserToModelFunction();
+    }
+
+    /**
+     * Returns a function to convert a list {@link Perfume} to {@link UsersModel}.
+     *
+     * @return UserToModelFunction instance
+     */
+    public UsersToModelFunction usersToModel() {
+        return new UsersToModelFunction();
+    }
+
 
 }

@@ -3,6 +3,7 @@ package pl.edu.pg.eti.kask.perfum.klasy.model.function;
 import lombok.SneakyThrows;
 import pl.edu.pg.eti.kask.perfum.klasy.entity.Perfume;
 import pl.edu.pg.eti.kask.perfum.klasy.model.PerfumeEditModel;
+import pl.edu.pg.eti.kask.perfum.user.entity.User;
 
 import java.io.Serializable;
 import java.util.function.BiFunction;
@@ -23,6 +24,9 @@ public class UpdatePerfumeWithModelFunction implements BiFunction<Perfume, Perfu
                 .price(request.getPrice())
                 .scentType(entity.getScentType())
                 .brand(entity.getBrand())
+                .user(User.builder()
+                        .id(request.getUser().getId())
+                        .build())
                 .build();
     }
 }

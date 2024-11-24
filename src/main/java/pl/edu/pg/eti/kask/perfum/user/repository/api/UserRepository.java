@@ -1,5 +1,6 @@
 package pl.edu.pg.eti.kask.perfum.user.repository.api;
 
+import pl.edu.pg.eti.kask.perfum.repository.api.Repository;
 import pl.edu.pg.eti.kask.perfum.user.entity.User;
 
 import java.util.List;
@@ -9,7 +10,7 @@ import java.util.UUID;
 /**
  * Repository for User entity.
  */
-public interface UserRepository {
+public interface UserRepository extends Repository<User, UUID> {
 
     Optional<User> find(UUID id);
     List<User> findAll();

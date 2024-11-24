@@ -1,5 +1,11 @@
-package pl.edu.pg.eti.kask.perfum.configuration.singleton;
+package pl.edu.pg.eti.kask.perfum.configuration.observer;
 
+import jakarta.annotation.security.DeclareRoles;
+import jakarta.annotation.security.RunAs;
+import jakarta.ejb.DependsOn;
+import jakarta.inject.Inject;
+import jakarta.security.enterprise.SecurityContext;
+import lombok.extern.java.Log;
 import jakarta.annotation.PostConstruct;
 import jakarta.ejb.EJB;
 import jakarta.ejb.Singleton;
@@ -32,6 +38,10 @@ import java.util.UUID;
 @Startup
 @TransactionAttribute(value = TransactionAttributeType.NOT_SUPPORTED)
 @NoArgsConstructor
+@DependsOn("InitializeAdminService")
+@DeclareRoles({UserRoles.ADMIN, UserRoles.USER})
+@RunAs(UserRoles.ADMIN)
+@Log
 public class InitializedData {
 
     /**
@@ -40,9 +50,11 @@ public class InitializedData {
     private BrandService brandService;
     private PerfumeService perfumeService;
     private UserService userService;
+    @Inject
+    private SecurityContext securityContext;
 
     @EJB
-    public void setCharacterService(PerfumeService perfumeService) {
+    public void setPerfumeService(PerfumeService perfumeService) {
         this.perfumeService = perfumeService;
     }
 
@@ -58,7 +70,7 @@ public class InitializedData {
      * @param brandService brand service
      */
     @EJB
-    public void setProfessionService(BrandService brandService) {
+    public void setBrandService(BrandService brandService) {
         this.brandService = brandService;
     }
 
@@ -191,5 +203,4 @@ public class InitializedData {
             }
         }
     }
-
 }

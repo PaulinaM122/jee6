@@ -9,6 +9,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import pl.edu.pg.eti.kask.perfum.user.model.UserModel;
 
 import java.util.Date;
 
@@ -49,5 +50,11 @@ public class PerfumeEditModel {
      * Multipart part for uploaded image file.
      */
     private Part image;
+
+    /**
+     * Character's owner.
+     */
+    private UserModel user;
+
 
 }

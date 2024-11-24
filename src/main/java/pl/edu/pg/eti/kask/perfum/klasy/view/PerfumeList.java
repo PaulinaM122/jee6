@@ -26,7 +26,7 @@ public class PerfumeList {
 
     public PerfumesModel getPerfumes() {
         if (perfumes == null) {
-            perfumes = factory.perfumesToModel().apply(service.findAll());
+            perfumes = factory.perfumesToModel().apply(service.findAllForCallerPrincipal());
         }
         return perfumes;
     }

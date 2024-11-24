@@ -99,7 +99,7 @@ public class PerfumeCreate implements Serializable {
     }
 
     public String saveAction() {
-        perfumeService.create(factory.modelToPerfume().apply(perfume));
+        perfumeService.createForCallerPrincipal(factory.modelToPerfume().apply(perfume));
         conversation.end();
         return "/klasy/perfume_list.xhtml?faces-redirect=true";
     }
