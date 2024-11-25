@@ -1,4 +1,4 @@
-#Tue Nov 19 11:18:50 CET 2024
+#Mon Nov 25 00:57:39 CET 2024
 lib/features/io.openliberty.managedBeansCore-2.0.mf=770015573734b391a918499eab8d3a52
 lib/com.ibm.ws.ejbcontainer.jakarta_1.0.95.jar=c05b76f73dff0eeaab7ff65fcdf3f7ec
 lib/com.ibm.ws.managedobject_1.0.95.jar=6f60faeac97f8ab93ffb6ce671b87689

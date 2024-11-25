@@ -1,16 +1,24 @@
-# Get all brands
-GET http://localhost:9080/perfumes/api/brands
+# kevin:useruser -> a2V2aW46dXNlcnVzZXI=
+# admin:adminadmin -> YWRtaW46YWRtaW5hZG1pbg==
+# alice:useruser -> YWxpY2U6dXNlcnVzZXI=
 
+# Get all brands
+# Permit all
+GET http://localhost:9080/perfumes/api/brands
+Authorization: Basic a2V2aW46dXNlcnVzZXI=
 ###
 
 # Get single brand
+# Permit all
 GET http://localhost:9080/perfumes/api/brands/b7d9c9be-8dfd-426b-826f-4715f88c2f2e
-
+Authorization: Basic a2V2aW46dXNlcnVzZXI=
 ###
 
 # Create a new brand
+# Permit admin
 PUT http://localhost:9080/perfumes/api/brands/d8b50a43-ed45-4441-9bcb-5db7782b47f6
 Content-Type: application/json
+Authorization: Basic YWRtaW46YWRtaW5hZG1pbg==
 
 {
   "name": "New Brand Name",
@@ -20,8 +28,10 @@ Content-Type: application/json
 ###
 
 # Update an existing brand
+# Permit admin
 PATCH http://localhost:9080/perfumes/api/brands/d8b50a43-ed45-4441-9bcb-5db7782b47f6
 Content-Type: application/json
+Authorization: Basic YWRtaW46YWRtaW5hZG1pbg==
 
 {
   "name": "Updated Brand Name",
@@ -31,8 +41,9 @@ Content-Type: application/json
 ###
 
 # Delete a brand
+# Permit admin
 DELETE http://localhost:9080/perfumes/api/brands/d8b50a43-ed45-4441-9bcb-5db7782b47f6
-
+Authorization: Basic YWRtaW46YWRtaW5hZG1pbg==
 ###
 
 # Get all perfumes within a brand
@@ -41,8 +52,10 @@ GET http://localhost:9080/perfumes/api/brands/d8b50a43-ed45-4441-9bcb-5db7782b47
 ###
 
 # Create a new perfume within a brand
+
 PUT http://localhost:9080/perfumes/api/brands/d8b50a43-ed45-4441-9bcb-5db7782b47f6/perfumes/3c6f1eb1-8069-44ab-988f-d7fed2b65d87
 Content-Type: application/json
+Authorization: Basic YWRtaW46YWRtaW5hZG1pbg==
 
 {
  "name": "Coco special",
@@ -55,30 +68,67 @@ Content-Type: application/json
 ###
 
 # Update an existing perfume within a brand
-PATCH http://localhost:9080/perfumes/api/brands/b7d9c9be-8dfd-426b-826f-4715f88c2f2e/perfumes/3c6f1eb1-8069-44ab-988f-d7fed2b65d86
+# alice perfume
+PATCH http://localhost:9080/perfumes/api/brands/b7d9c9be-8dfd-426b-826f-4715f88c2f2e/perfumes/3fa7d874-8a33-47d1-8a65-558c50a64d56
 Content-Type: application/json
+Authorization: Basic YWxpY2U6dXNlcnVzZXI=
 
 {
-  "name": "Coco special",
+  "name": "Coco Mademoiselle U",
   "price": 1800.0,
   "scentType": "FLORAL"
+}
+
+# Update an existing perfume within a brand
+# kevin perfume
+PATCH http://localhost:9080/perfumes/api/brands/a1d6a00b-4d4f-4dbd-9b8b-08b4c8b68b6b/perfumes/ed50cbf7-67e8-4a1b-9e4d-627d6a587b36
+Content-Type: application/json
+Authorization: Basic YWxpY2U6dXNlcnVzZXI=
+
+{
+  "name": "Sauvage U",
+  "price": 1200.0,
+  "scentType": "SPICY"
 }
 
 ###
 
 # Delete a perfume within a brand
-DELETE http://localhost:9080/perfumes/api/brands/b7d9c9be-8dfd-426b-826f-4715f88c2f2e/perfumes/3c6f1eb1-8069-44ab-988f-d7fed2b65d86
+DELETE http://localhost:9080/perfumes/api/brands/b7d9c9be-8dfd-426b-826f-4715f88c2f2e/perfumes/3fa7d874-8a33-47d1-8a65-558c50a64d56
 
 ###
 
 # Get all perfumes across all brands
 GET http://localhost:9080/perfumes/api/perfumes
+Authorization: Basic YWRtaW46YWRtaW5hZG1pbg==
 
 ###
 
 # Get a single perfume by ID
-GET http://localhost:9080/perfumes/api/perfumes/3c6f1eb1-8069-44ab-988f-d7fed2b65d86
+GET http://localhost:9080/perfumes/api/perfumes/3fa7d874-8a33-47d1-8a65-558c50a64d56
 
+###
+
+# Get all users
+GET http://localhost:9080/perfumes/api/users
+Authorization: Basic YWRtaW46YWRtaW5hZG1pbg==
+
+###
+
+# Create a new user
+
+PUT http://localhost:9080/perfumes/api/users/3c6f1eb1-8069-44ab-988f-d7fed2b65d22
+Content-Type: application/json
+Authorization: Basic YWRtaW46YWRtaW5hZG1pbg==
+
+{
+    "login": "john_doe",
+    "name": "John",
+    "surname": "Doe",
+    "email": "john.doe@example.com",
+    "password": "securepassword123",
+    "birthDate": "1980-01-01"
+}
 
 ########################################################################
 # Get all characters. No credentials.

@@ -10,7 +10,7 @@
     <serverName>defaultServer</serverName>
     <configDirectory>C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\liberty\config</configDirectory>
     <configFile>C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\liberty\config\server.xml</configFile>
-    <appsDirectory>dropins</appsDirectory>
+    <appsDirectory>apps</appsDirectory>
     <looseApplication>true</looseApplication>
     <stripVersion>false</stripVersion>
     <installAppPackages>project</installAppPackages>
@@ -27,6 +27,4 @@
     <installAppsConfigDropins>C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\target\liberty\wlp\usr\servers\defaultServer\configDropins\defaults\install_apps_configuration_1491924271.xml</installAppsConfigDropins>
     <projectType>war</projectType>
     <projectCompileDependency>org.webjars.npm:mdb-ui-kit:6.4.0</projectCompileDependency>
-    <projectCompileDependency>jakarta.security.enterprise:jakarta.security.enterprise-api:3.0.0</projectCompileDependency>
-    <projectCompileDependency>jakarta.json:jakarta.json-api:2.1.0</projectCompileDependency>
 </liberty-plugin-config>

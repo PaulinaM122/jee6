@@ -61,7 +61,7 @@ public class UserService {
     /**
      * @return all available users
      */
-    @RolesAllowed(UserRoles.ADMIN)
+    @PermitAll
     public List<User> findAll() {
         return repository.findAll();
     }

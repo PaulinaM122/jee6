@@ -1,4 +1,4 @@
-#Tue Nov 19 11:18:49 CET 2024
+#Mon Nov 25 00:57:37 CET 2024
 bin/ddlGen=3722c04bb9004fba8652ac36f5d2a64f
 lib/com.ibm.ws.persistence.jakarta_1.0.95.jar=196c016d1d8e517ead2cbe0fcabe6300
 dev/api/ibm/com.ibm.websphere.appserver.api.persistence_1.0.95.jar=739d7f022139b7994bded991493b98dc

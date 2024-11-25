@@ -37,5 +37,5 @@ public class GetUsersResponse {
         private String login;
     }
     @Singular
-    private List<User> users;
+    public List<User> users;
 }

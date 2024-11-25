@@ -1,4 +1,4 @@
-#Tue Nov 19 11:18:47 CET 2024
+#Mon Nov 25 00:57:33 CET 2024
 dev/api/ibm/com.ibm.websphere.appserver.api.basics_1.4.95.jar=6422f2e1a6cdb13efc1f3eec6d52d61e
 lib/features/com.ibm.websphere.appserver.appmanager-1.0.mf=44580487a338f9f448668abb391241e1
 lib/com.ibm.ws.app.manager_1.1.95.jar=5ef2a02910ee21dd06100a8eee9c639d

@@ -1,77 +1,83 @@
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/component/DtoFunctionFactory.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/component/ModelFunctionFactory.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/configuration/observer/InitializedData.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/controller/config/ApplicationConfig.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/crypto/component/Pbkdf2PasswordHash.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/klasy/controller/api/BrandController.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/klasy/controller/api/PerfumeController.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/klasy/controller/rest/BrandRestController.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/klasy/controller/rest/PerfumeRestController.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/klasy/dto/GetBrandResponse.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/klasy/dto/GetBrandsResponse.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/klasy/dto/GetPerfumeResponse.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/klasy/dto/GetPerfumesResponse.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/klasy/dto/PatchBrandRequest.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/klasy/dto/PatchPerfumeRequest.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/klasy/dto/PutBrandRequest.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/klasy/dto/PutPerfumeRequest.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/klasy/dto/function/BrandToResponseFunction.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/klasy/dto/function/BrandsToResponseFunction.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/klasy/dto/function/PerfumeToResponseFunction.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/klasy/dto/function/PerfumesToResponseFunction.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/klasy/dto/function/RequestToBrandFunction.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/klasy/dto/function/RequestToPerfumeFunction.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/klasy/dto/function/UpdateBrandWithRequestFunction.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/klasy/dto/function/UpdatePerfumeWithRequestFunction.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/klasy/entity/Brand.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/klasy/entity/Perfume.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/klasy/model/BrandEditModel.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/klasy/model/BrandModel.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/klasy/model/PerfumeCreateModel.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/klasy/model/PerfumeEditModel.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/klasy/model/PerfumeModel.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/klasy/model/PerfumesModel.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/klasy/model/converter/BrandModelConverter.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/klasy/model/function/BrandToEditModelFunction.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/klasy/model/function/BrandToModelFunction.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/klasy/model/function/BrandsToModelFunction.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/klasy/model/function/ModelToPerfumeFunction.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/klasy/model/function/PerfumeToEditModelFunction.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/klasy/model/function/PerfumeToModelFunction.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/klasy/model/function/PerfumesToModelFunction.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/klasy/model/function/UpdateBrandWithModelFunction.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/klasy/model/function/UpdatePerfumeWithModelFunction.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/klasy/repository/api/BrandRepository.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/klasy/repository/api/PerfumeRepository.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/klasy/repository/persistence/BrandPersistenceRepository.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/klasy/repository/persistence/PerfumePersistenceRepository.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/klasy/service/BrandService.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/klasy/service/PerfumeService.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/klasy/view/BrandCreate.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/klasy/view/BrandEdit.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/klasy/view/BrandList.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/klasy/view/BrandView.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/klasy/view/PerfumeCreate.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/klasy/view/PerfumeEdit.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/klasy/view/PerfumeList.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/klasy/view/PerfumeView.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/repository/api/Repository.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/user/controller/UserController.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/user/controller/UserSimpleController.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/user/dto/GetUserResponse.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/user/dto/GetUsersResponse.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/user/dto/PatchUserRequest.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/user/dto/PutPasswordRequest.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/user/dto/PutUserRequest.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/user/dto/function/RequestToUserFunction.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/user/dto/function/UpdateUserPasswordWithRequestFunction.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/user/dto/function/UpdateUserWithRequestFunction.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/user/dto/function/UserToResponseFunction.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/user/dto/function/UsersToResponseFunction.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/user/entity/User.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/user/entity/UserRoles.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/user/repository/api/UserRepository.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/user/repository/persistence/UserPersistenceRepository.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/user/service/UserService.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/view/config/ViewConfig.java
-/home/student/Pulpit/191677/jee5-master/src/main/java/pl/edu/pg/eti/kask/perfum/view/converter/UuidConverter.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\klasy\model\PerfumesModel.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\klasy\repository\api\PerfumeRepository.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\klasy\entity\Perfume.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\klasy\view\PerfumeList.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\klasy\model\PerfumeEditModel.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\user\dto\function\UpdateUserPasswordWithRequestFunction.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\user\model\converter\UserModelConverter.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\user\model\function\UserToModelFunction.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\klasy\entity\Brand.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\klasy\dto\function\PerfumesToResponseFunction.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\klasy\controller\api\PerfumeController.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\klasy\dto\function\PerfumeToResponseFunction.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\klasy\dto\PutPerfumeRequest.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\klasy\dto\function\UpdateBrandWithRequestFunction.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\view\converter\UuidConverter.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\klasy\repository\api\BrandRepository.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\klasy\service\PerfumeService.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\user\dto\GetUserResponse.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\klasy\dto\function\RequestToPerfumeFunction.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\klasy\view\BrandEdit.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\user\controller\rest\UserRestController.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\klasy\view\PerfumeView.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\klasy\model\PerfumeModel.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\component\DtoFunctionFactory.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\klasy\dto\function\RequestToBrandFunction.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\controller\config\ApplicationConfig.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\repository\api\Repository.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\klasy\dto\PutBrandRequest.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\klasy\view\BrandList.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\user\repository\rest\UserPersistenceRepository.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\klasy\model\function\BrandsToModelFunction.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\klasy\dto\GetPerfumesResponse.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\user\dto\function\UsersToResponseFunction.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\klasy\model\function\BrandToEditModelFunction.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\klasy\model\function\PerfumeToEditModelFunction.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\user\dto\function\UpdateUserWithRequestFunction.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\klasy\controller\rest\PerfumeRestController.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\klasy\dto\GetBrandsResponse.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\authentication\config\AuthenticationConfig.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\klasy\repository\persistence\BrandPersistenceRepository.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\user\entity\UserRoles.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\configuration\observer\InitializedData.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\user\dto\function\RequestToUserFunction.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\klasy\model\converter\BrandModelConverter.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\klasy\dto\PatchPerfumeRequest.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\configuration\observer\InitializeAdminService.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\klasy\view\PerfumeCreate.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\klasy\model\function\UpdateBrandWithModelFunction.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\view\config\ViewConfig.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\klasy\model\BrandModel.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\user\dto\PutUserRequest.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\klasy\model\PerfumeCreateModel.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\klasy\view\BrandCreate.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\klasy\model\function\BrandToModelFunction.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\klasy\view\BrandView.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\component\ModelFunctionFactory.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\klasy\dto\GetBrandResponse.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\klasy\model\function\PerfumesToModelFunction.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\klasy\repository\persistence\PerfumePersistenceRepository.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\klasy\model\BrandEditModel.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\klasy\controller\api\BrandController.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\klasy\model\function\ModelToPerfumeFunction.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\klasy\controller\rest\BrandRestController.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\klasy\dto\function\BrandToResponseFunction.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\user\dto\PutPasswordRequest.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\user\service\UserService.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\klasy\model\function\PerfumeToModelFunction.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\klasy\service\BrandService.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\klasy\dto\PatchBrandRequest.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\user\controller\api\UserController.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\klasy\dto\function\UpdatePerfumeWithRequestFunction.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\klasy\view\PerfumeEdit.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\user\entity\User.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\user\repository\api\UserRepository.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\klasy\dto\function\BrandsToResponseFunction.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\user\dto\PatchUserRequest.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\user\model\UsersModel.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\user\dto\GetUsersResponse.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\klasy\model\function\UpdatePerfumeWithModelFunction.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\user\dto\function\UserToResponseFunction.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\user\model\UserModel.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\user\model\function\UsersToModelFunction.java
+C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab6\jee6\jee6\src\main\java\pl\edu\pg\eti\kask\perfum\klasy\dto\GetPerfumeResponse.java

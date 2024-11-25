@@ -41,7 +41,6 @@ public class BrandService {
      * @param id brand's id
      * @return container with brand entity
      */
-    @PermitAll
     public Optional<Brand> find(UUID id) {
         Optional<Brand> brand = repository.find(id);
         /* Until lazy loaded list of perfumes is not accessed it is not in cache, so it does not need bo te cared of. */

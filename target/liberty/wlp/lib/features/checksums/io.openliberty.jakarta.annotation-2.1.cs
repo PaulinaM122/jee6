@@ -1,3 +1,3 @@
-#Tue Nov 19 11:18:54 CET 2024
+#Mon Nov 25 00:57:47 CET 2024
 dev/api/spec/io.openliberty.jakarta.annotation.2.1_1.0.95.jar=41019427e466e2885da7fac06e6ded00
 lib/features/io.openliberty.jakarta.annotation-2.1.mf=0e7e2fcdbd84dfdb5c77e06fbded9c4c
