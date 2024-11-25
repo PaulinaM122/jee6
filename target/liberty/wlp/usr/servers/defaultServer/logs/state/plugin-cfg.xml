@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!--HTTP server plugin config file for defaultServer generated on 2024.11.25 at 02:31:54 CET-->
+<?xml version="1.0" encoding="UTF-8"?><!--HTTP server plugin config file for defaultServer generated on 2024.11.25 at 02:57:13 CET-->
 <Config ASDisableNagle="false" AcceptAllContent="false" AppServerPortPreference="HostHeader" ChunkedResponse="false" ConfigHash="1078216312" FIPSEnable="false" IISDisableNagle="false" IISPluginPriority="High" IgnoreDNSFailures="false" RefreshInterval="60" ResponseChunkSize="64" SSLConsolidate="false" TrustedProxyEnable="false" VHostMatchingCompat="false">
        
     <Log LogLevel="Error" Name="/opt/IBM/WebSphere/Plugins/logs/webserver1/http_plugin.log"/>
